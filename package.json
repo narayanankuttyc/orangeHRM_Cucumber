@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start":"npx cypress run",
+    "reports": "node reports_cucumber.js",
+    "startreports": "npx cypress run && node reports_cucumber.js" 
+
+
+  },
+  "dependencies": {
+    "cypress": "^13.3.2",
+    "simple-encryptor":"4.0.0"
+  },
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^3.5.0"
+  },
+
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/steps",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+
+  }
+}
